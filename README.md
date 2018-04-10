@@ -1,5 +1,5 @@
-# zel-rates-api
-A Restful API that displays current ZEL exchange Rates
+# hush-rates-api
+A Restful API that displays current HUSH exchange Rates
 
 ## Requirements
 Requires node version 6.0 and above
@@ -22,10 +22,10 @@ Example: http://localhost:3333/rates
 ## Docker
 To build the docker image run with command:
 ```
-docker build -t zel/zel-rates-api .
+docker build -t hush/hush-rates-api .
 ```
 
 Then run the docker image with command:
 ```
-docker run -d --restart always -p 3333:3333 --name zel-rates-api zel/zel-rates-api
+docker run -d --restart always -p 3333:3333 --name hush-rates-api hush/hush-rates-api
 ```

@@ -1,18 +1,18 @@
 const request = require('request-promise-native');
 
-const zelRates = {
+const hushRates = {
   getAll() {
     return Promise.all([
-      request({ uri: 'https://graviex.net/api/v2/tickers/zelbtc', json: true, strictSSL: false }),
+      request({ uri: 'https://api.coinmarketcap.com/v1/ticker/hush/', json: true }),
       request({ uri: 'https://bitpay.com/api/rates', json: true }),
     ]).then((results) => {
-      const cmcData = results[0]; // results from stock exchange
+      const cmcData = results[0]; // results from coinmarketcap
       const bitpayData = results[1]; // results from bitpay
-      const zelBtcExchangeRate = cmcData.ticker.last;
+      const hushBtcExchangeRate = cmcData[0].price_btc;
       const rates = [];
 
       bitpayData.forEach((value) => {
-        const exchangeRate = zelBtcExchangeRate * value.rate;
+        const exchangeRate = hushBtcExchangeRate * value.rate;
         rates.push({ code: value.code, name: value.name, rate: exchangeRate });
       });
 
@@ -21,4 +21,4 @@ const zelRates = {
   },
 };
 
-module.exports = zelRates;
+module.exports = hushRates;
