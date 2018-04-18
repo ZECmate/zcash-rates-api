@@ -1,5 +1,5 @@
-# hush-rates-api
-A Restful API that displays current HUSH exchange Rates
+# zcash-rates-api
+A Restful API that displays current ZCASH exchange Rates
 
 ## Requirements
 Requires node version 6.0 and above
@@ -22,10 +22,10 @@ Example: http://localhost:3333/rates
 ## Docker
 To build the docker image run with command:
 ```
-docker build -t hush/hush-rates-api .
+docker build -t zcash/zcash-rates-api .
 ```
 
 Then run the docker image with command:
 ```
-docker run -d --restart always -p 3333:3333 --name hush-rates-api hush/hush-rates-api
+docker run -d --restart always -p 3333:3333 --name zcash-rates-api zcash/zcash-rates-api
 ```

@@ -1,7 +1,7 @@
 {
-  "name": "hush-rates",
+  "name": "zcash-rates",
   "version": "1.0.0",
-  "description": "Service that supplies HUSH rate conversion to other curriences",
+  "description": "Service that supplies ZCASH rate conversion to other curriences",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
